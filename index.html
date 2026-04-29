@@ -1,2 +1,181 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Tro Ly AI - Chuyen Vien Chieu Cao</title><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"><style>:root{--green:#1a6b3c;--green-light:#2d9e5f;--green-pale:#e8f5ee;--green-mid:#a8d5b8;--gold:#c9a84c;--gold-light:#f0d080;--bg:#f7f9f7;--white:#fff;--text:#1a2e1f;--text-muted:#5a7a62;--border:#d0e8d8;--shadow:0 4px 24px rgba(26,107,60,.08)}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}header{background:var(--green);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,.15)}.logo{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--green);font-weight:600;flex-shrink:0}.header-text h1{font-size:1.05rem;font-weight:700;color:#fff}.header-text p{font-size:.75rem;color:var(--green-mid);margin-top:2px}.badge{margin-left:auto;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:var(--gold-light);font-size:.7rem;padding:4px 10px;border-radius:20px;font-weight:500;white-space:nowrap}.tabs{background:var(--white);border-bottom:1px solid var(--border);display:flex;padding:0 1rem}.tab{padding:.8rem 1.2rem;font-size:.82rem;font-weight:500;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}.tab.active{color:var(--green);border-bottom-color:var(--green);font-weight:600}main{flex:1;display:flex;flex-direction:column;overflow:hidden}.panel{display:none;flex:1;flex-direction:column;overflow:hidden}.panel.active{display:flex}.chat-container{flex:1;overflow-y:auto;padding:1.5rem 1rem;display:flex;flex-direction:column;gap:1rem}.welcome{text-align:center;padding:2rem 1rem;max-width:480px;margin:0 auto}.welcome-icon{width:64px;height:64px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem}.welcome h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--green);margin-bottom:.5rem}.welcome p{font-size:.875rem;color:var(--text-muted);line-height:1.6}.quick-questions{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1.5rem}.quick-btn{background:var(--white);border:1px solid var(--border);color:var(--green);font-size:.78rem;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:all .2s;font-weight:500}.quick-btn:hover{background:var(--green-pale);border-color:var(--green-light)}.message{display:flex;gap:.75rem;max-width:85%;animation:fadeIn .3s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}.message.user{align-self:flex-end;flex-direction:row-reverse}.message.assistant{align-self:flex-start}.avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600}.message.user .avatar{background:var(--green);color:#fff}.message.assistant .avatar{background:var(--gold);color:var(--green)}.bubble{padding:.75rem 1rem;border-radius:16px;font-size:.875rem;line-height:1.65}.message.user .bubble{background:var(--green);color:#fff;border-bottom-right-radius:4px}.message.assistant .bubble{background:var(--white);border:1px solid var(--border);color:var(--text);border-bottom-left-radius:4px;box-shadow:var(--shadow)}.typing{display:flex;gap:4px;align-items:center;padding:4px 0}.typing span{width:6px;height:6px;background:var(--green-mid);border-radius:50%;animation:bounce 1.2s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}.input-area{background:var(--white);border-top:1px solid var(--border);padding:.875rem 1rem}.input-row{display:flex;gap:.5rem;align-items:flex-end;background:var(--bg);border:1.5px solid var(--border);border-radius:24px;padding:.5rem .5rem .5rem 1rem;transition:border-color .2s}.input-row:focus-within{border-color:var(--green-light)}textarea{flex:1;border:none;background:transparent;font-family:'Be Vietnam Pro',sans-serif;font-size:.875rem;color:var(--text);resize:none;outline:none;max-height:120px;min-height:24px;line-height:1.5}textarea::placeholder{color:var(--text-muted)}.send-btn{width:36px;height:36px;background:var(--green);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .1s}.send-btn:hover{background:var(--green-light)}.send-btn:active{transform:scale(.93)}.send-btn svg{width:16px;height:16px;fill:#fff}.roadmap-container{flex:1;overflow-y:auto;padding:1.5rem 1rem}.roadmap-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--green);text-align:center;margin-bottom:1.5rem}.level-card{background:var(--white);border:1px solid var(--border);border-radius:12px;margin-bottom:.75rem;overflow:hidden;cursor:pointer;transition:box-shadow .2s}.level-card:hover{box-shadow:var(--shadow)}.level-header{display:flex;align-items:center;gap:.875rem;padding:.875rem 1rem}.level-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0}.level-info{flex:1}.level-name{font-weight:600;font-size:.9rem}.level-sub{font-size:.75rem;color:var(--text-muted);margin-top:2px}.level-arrow{color:var(--text-muted);font-size:.8rem;transition:transform .2s}.level-card.open .level-arrow{transform:rotate(180deg)}.level-body{display:none;padding:0 1rem 1rem;border-top:1px solid var(--border)}.level-card.open .level-body{display:block}.level-section{margin-top:.75rem}.level-section-title{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin-bottom:.4rem}.level-section ul{list-style:none;padding:0}.level-section li{font-size:.82rem;color:var(--text);padding:3px 0 3px 1rem;position:relative;line-height:1.5}.level-section li::before{content:'✓';position:absolute;left:0;color:var(--green-light);font-size:.75rem}.stats-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}.stat-pill{background:var(--green-pale);border:1px solid var(--green-mid);border-radius:8px;padding:5px 10px;font-size:.75rem;color:var(--green);font-weight:500}.lvl-0 .level-num{background:#e8e8e8;color:#555}.lvl-1 .level-num{background:#dff0e8;color:#1a6b3c}.lvl-2 .level-num{background:#c8e6d4;color:#1a6b3c}.lvl-3 .level-num{background:#a8d5b8;color:#1a6b3c}.lvl-4 .level-num{background:var(--gold-light);color:#7a5a00}.lvl-5 .level-num{background:#f5c842;color:#7a5a00}.lvl-6 .level-num{background:#e8a020;color:#fff}.lvl-7 .level-num{background:linear-gradient(135deg,#c9a84c,#e8c060);color:#fff}@media(min-width:600px){.chat-container,.roadmap-container{padding:2rem}.message{max-width:70%}}</style></head><body><header><div class="logo">M</div><div class="header-text"><h1>Tro Ly Midu AI</h1><p>Chuyen vien Chieu cao</p></div><span class="badge">✦ He thong 8 bac</span></header><div class="tabs"><div class="tab active" onclick="switchTab('chat')">💬 Hoi dap AI</div><div class="tab" onclick="switchTab('roadmap')">📊 Lo trinh thang cap</div></div><main><div class="panel active" id="panel-chat"><div class="chat-container" id="chat-container"><div class="welcome" id="welcome"><div class="welcome-icon">📏</div><h2>Xin chao, Chuyen vien!</h2><p>Toi la tro ly AI ho tro ban ve chuyen mon chieu cao, tu van khach hang va lo trinh thang cap trong he thong Midu.</p><div class="quick-questions"><button class="quick-btn" onclick="sendQuick('Dieu kien de len Bac 2 la gi?')">Len Bac 2 can gi?</button><button class="quick-btn" onclick="sendQuick('Khach hang 8 tuoi muon tang chieu cao, toi tu van the nao?')">Tu van tre 8 tuoi</button><button class="quick-btn" onclick="sendQuick('PTTT la gi?')">PTTT la gi?</button><button class="quick-btn" onclick="sendQuick('Toi dang o Bac 1, can lam gi de len Bac 2?')">Roadmap Bac 1 len 2</button><button class="quick-btn" onclick="sendQuick('Magie co vai tro gi trong phat trien chieu cao?')">Vai tro cua Magie</button><button class="quick-btn" onclick="sendQuick('Van dong goc la gi?')">Van dong goc</button></div></div></div><div class="input-area"><div class="input-row"><textarea id="user-input" placeholder="Hoi ve chuyen mon, tu van khach hang, lo trinh thang cap..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea><button class="send-btn" onclick="sendMessage()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button></div></div></div><div class="panel" id="panel-roadmap"><div class="roadmap-container"><div class="roadmap-title">He thong 8 Bac Chuyen Vien &amp; Chuyen Gia Chieu Cao</div><div class="level-card lvl-0" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">0</div><div class="level-info"><div class="level-name">Chuyen vien Tap su</div><div class="level-sub">Buoc dau tien</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>Hoan thanh chuong trinh Chuyen vien chieu cao</li><li>Test khai mo va tot nghiep</li><li>2 ban phan tich PTTT va DDCC</li><li>2 ban phac do du doan chieu cao</li></ul></div><div class="stats-row"><span class="stat-pill">📄 2 phan tich</span><span class="stat-pill">📋 2 phac do</span></div></div></div><div class="level-card lvl-1" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">1</div><div class="level-info"><div class="level-name">Chuyen vien Chinh thuc</div><div class="level-sub">Hoat dong chuyen nghiep</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>Hoan thanh Chuong trinh ung dung Elearning</li><li>Hoan thanh khoa Van dong goc</li><li>1 bai viet dong gop cong dong</li></ul></div><div class="stats-row"><span class="stat-pill">📄 10 phan tich</span><span class="stat-pill">📋 10 phac do</span><span class="stat-pill">💰 5 trieu DS</span></div></div></div><div class="level-card lvl-2" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">2</div><div class="level-info"><div class="level-name">Chuyen vien Uu tu</div><div class="level-sub">Mo rong doi nhom</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>Khoa Magie + Khoa lieu trinh san pham Midu</li><li>1 thang chien binh content</li><li>Test 20 cau trac nghiem</li><li>Tuyen 1 nguoi hoan thanh tap su</li><li>300 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 40 phan tich</span><span class="stat-pill">📋 20 phac do</span><span class="stat-pill">💰 20 trieu DS</span></div></div></div><div class="level-card lvl-3" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">3</div><div class="level-info"><div class="level-name">Chuyen vien Cao cap</div><div class="level-sub">Doi nhom vung manh</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>2 khoa chuyen sau + kinh doanh ben vung</li><li>21 ngay ren luyen Van dong goc</li><li>Tuyen 3 nguoi hoan thanh tap su</li><li>500 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 80 phan tich</span><span class="stat-pill">📋 40 phac do</span><span class="stat-pill">💰 50 trieu DS</span></div></div></div><div class="level-card lvl-4" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">4</div><div class="level-info"><div class="level-name">Chuyen gia Chinh thuc</div><div class="level-sub">Hang ngu Chuyen gia</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>21 ngay Van dong goc + 3 thang content</li><li>Test 20 cau + 5 cau tu luan</li><li>Tuyen 5 nguoi + ho tro 2 CV chinh thuc</li><li>1.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 140 phan tich</span><span class="stat-pill">📋 70 phac do</span><span class="stat-pill">💰 100 trieu DS</span></div></div></div><div class="level-card lvl-5" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">5</div><div class="level-info"><div class="level-name">Chuyen gia Uu tu</div><div class="level-sub">Tam anh huong rong</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>Test 20 cau + 10 cau tu luan</li><li>Tuyen 10 nguoi + ho tro 2 CV uu tu</li><li>5.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 200 phan tich</span><span class="stat-pill">📋 100 phac do</span><span class="stat-pill">💰 200 trieu DS</span></div></div></div><div class="level-card lvl-6" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">6</div><div class="level-info"><div class="level-name">Chuyen gia Cao cap</div><div class="level-sub">Lanh dao cong dong</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>Test 25 cau + 10 cau tu luan</li><li>Tuyen 15 nguoi + ho tro 3 CV cao cap</li><li>20.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 300 phan tich</span><span class="stat-pill">📋 150 phac do</span><span class="stat-pill">💰 500 trieu DS</span></div></div></div><div class="level-card lvl-7" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">7</div><div class="level-info"><div class="level-name">Chuyen gia Cong hien</div><div class="level-sub">Dinh cao hanh trinh</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Dieu kien</div><ul><li>Chuong trinh lanh dao 21 ngay</li><li>Test 30 cau + 15 cau tu luan</li><li>Tuyen 20 nguoi + ho tro 5 CV cao cap</li><li>50.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 500 phan tich</span><span class="stat-pill">📋 250 phac do</span><span class="stat-pill">💰 1 ty DS</span></div></div></div></div></div></main><script>let messages=[],isLoading=false;function switchTab(t){document.querySelectorAll('.tab').forEach((x,i)=>x.classList.toggle('active',['chat','roadmap'][i]===t));document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById('panel-'+t).classList.add('active')}function toggleLevel(c){c.classList.toggle('open')}function handleKey(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage()}}function autoResize(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,120)+'px'}function sendQuick(t){document.getElementById('user-input').value=t;sendMessage()}function addMessage(role,content){const c=document.getElementById('chat-container');const w=document.getElementById('welcome');if(w)w.remove();const d=document.createElement('div');d.className='message '+role;const a=document.createElement('div');a.className='avatar';a.textContent=role==='user'?'B':'AI';const b=document.createElement('div');b.className='bubble';b.innerHTML=content.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/**(.*?)**/g,'<strong>$1</strong>').replace(/
-/g,'<br>');d.appendChild(a);d.appendChild(b);c.appendChild(d);c.scrollTop=c.scrollHeight}function addTyping(){const c=document.getElementById('chat-container');const d=document.createElement('div');d.className='message assistant';d.id='typing-indicator';const a=document.createElement('div');a.className='avatar';a.textContent='AI';const b=document.createElement('div');b.className='bubble';b.innerHTML='<div class="typing"><span></span><span></span><span></span></div>';d.appendChild(a);d.appendChild(b);c.appendChild(d);c.scrollTop=c.scrollHeight}function removeTyping(){const e=document.getElementById('typing-indicator');if(e)e.remove()}async function sendMessage(){if(isLoading)return;const input=document.getElementById('user-input');const text=input.value.trim();if(!text)return;input.value='';input.style.height='auto';addMessage('user',text);messages.push({role:'user',content:text});isLoading=true;addTyping();try{const res=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages})});const data=await res.json();removeTyping();if(data.content&&data.content[0]){const r=data.content[0].text;messages.push({role:'assistant',content:r});addMessage('assistant',r);}else addMessage('assistant','Xin loi, co loi xay ra.');}catch(err){removeTyping();addMessage('assistant','Khong the ket noi.');}isLoading=false}</script></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trợ Lý AI - Chuyên Viên Chiều Cao</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1a6b3c;--green-light:#2d9e5f;--green-pale:#e8f5ee;--green-mid:#a8d5b8;--gold:#c9a84c;--gold-light:#f0d080;--bg:#f7f9f7;--white:#fff;--text:#1a2e1f;--text-muted:#5a7a62;--border:#d0e8d8;--shadow:0 4px 24px rgba(26,107,60,.08)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+header{background:var(--green);padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.logo{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--green);font-weight:600;flex-shrink:0}
+.header-text h1{font-size:1.05rem;font-weight:700;color:#fff;line-height:1.2}
+.header-text p{font-size:.75rem;color:var(--green-mid);margin-top:2px}
+.badge{margin-left:auto;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:var(--gold-light);font-size:.7rem;padding:4px 10px;border-radius:20px;font-weight:500;white-space:nowrap}
+.tabs{background:var(--white);border-bottom:1px solid var(--border);display:flex;padding:0 1rem}
+.tab{padding:.8rem 1.2rem;font-size:.82rem;font-weight:500;color:var(--text-muted);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap}
+.tab.active{color:var(--green);border-bottom-color:var(--green);font-weight:600}
+main{flex:1;display:flex;flex-direction:column;overflow:hidden}
+.panel{display:none;flex:1;flex-direction:column;overflow:hidden}
+.panel.active{display:flex}
+.chat-container{flex:1;overflow-y:auto;padding:1.5rem 1rem;display:flex;flex-direction:column;gap:1rem}
+.welcome{text-align:center;padding:2rem 1rem;max-width:480px;margin:0 auto}
+.welcome-icon{width:64px;height:64px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:50%;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+.welcome h2{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--green);margin-bottom:.5rem}
+.welcome p{font-size:.875rem;color:var(--text-muted);line-height:1.6}
+.quick-questions{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:1.5rem}
+.quick-btn{background:var(--white);border:1px solid var(--border);color:var(--green);font-size:.78rem;padding:6px 12px;border-radius:20px;cursor:pointer;font-family:'Be Vietnam Pro',sans-serif;transition:all .2s;font-weight:500}
+.quick-btn:hover{background:var(--green-pale);border-color:var(--green-light)}
+.message{display:flex;gap:.75rem;max-width:85%;animation:fadeIn .3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.message.user{align-self:flex-end;flex-direction:row-reverse}
+.message.assistant{align-self:flex-start}
+.avatar{width:32px;height:32px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600}
+.message.user .avatar{background:var(--green);color:#fff}
+.message.assistant .avatar{background:var(--gold);color:var(--green)}
+.bubble{padding:.75rem 1rem;border-radius:16px;font-size:.875rem;line-height:1.65}
+.message.user .bubble{background:var(--green);color:#fff;border-bottom-right-radius:4px}
+.message.assistant .bubble{background:var(--white);border:1px solid var(--border);color:var(--text);border-bottom-left-radius:4px;box-shadow:var(--shadow)}
+.typing{display:flex;gap:4px;align-items:center;padding:4px 0}
+.typing span{width:6px;height:6px;background:var(--green-mid);border-radius:50%;animation:bounce 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+.input-area{background:var(--white);border-top:1px solid var(--border);padding:.875rem 1rem}
+.input-row{display:flex;gap:.5rem;align-items:flex-end;background:var(--bg);border:1.5px solid var(--border);border-radius:24px;padding:.5rem .5rem .5rem 1rem;transition:border-color .2s}
+.input-row:focus-within{border-color:var(--green-light)}
+textarea{flex:1;border:none;background:transparent;font-family:'Be Vietnam Pro',sans-serif;font-size:.875rem;color:#1a2e1f;resize:none;outline:none;max-height:120px;min-height:24px;line-height:1.5}
+textarea::placeholder{color:#5a7a62}
+.send-btn{width:36px;height:36px;background:var(--green);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .1s}
+.send-btn:hover{background:var(--green-light)}
+.send-btn:active{transform:scale(.93)}
+.send-btn svg{width:16px;height:16px;fill:#fff}
+.roadmap-container{flex:1;overflow-y:auto;padding:1.5rem 1rem}
+.roadmap-title{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--green);text-align:center;margin-bottom:1.5rem}
+.level-card{background:var(--white);border:1px solid var(--border);border-radius:12px;margin-bottom:.75rem;overflow:hidden;cursor:pointer;transition:box-shadow .2s}
+.level-card:hover{box-shadow:var(--shadow)}
+.level-header{display:flex;align-items:center;gap:.875rem;padding:.875rem 1rem}
+.level-num{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex-shrink:0}
+.level-info{flex:1}.level-name{font-weight:600;font-size:.9rem;color:#1a2e1f}
+.level-sub{font-size:.75rem;color:var(--text-muted);margin-top:2px}
+.level-arrow{color:var(--text-muted);font-size:.8rem;transition:transform .2s}
+.level-card.open .level-arrow{transform:rotate(180deg)}
+.level-body{display:none;padding:0 1rem 1rem;border-top:1px solid var(--border)}
+.level-card.open .level-body{display:block}
+.level-section{margin-top:.75rem}
+.level-section-title{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin-bottom:.4rem}
+.level-section ul{list-style:none;padding:0}
+.level-section li{font-size:.82rem;color:#1a2e1f;padding:3px 0 3px 1rem;position:relative;line-height:1.5}
+.level-section li::before{content:'✓';position:absolute;left:0;color:var(--green-light);font-size:.75rem}
+.stats-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}
+.stat-pill{background:var(--green-pale);border:1px solid var(--green-mid);border-radius:8px;padding:5px 10px;font-size:.75rem;color:var(--green);font-weight:500}
+.lvl-0 .level-num{background:#e8e8e8;color:#555}
+.lvl-1 .level-num{background:#dff0e8;color:#1a6b3c}
+.lvl-2 .level-num{background:#c8e6d4;color:#1a6b3c}
+.lvl-3 .level-num{background:#a8d5b8;color:#1a6b3c}
+.lvl-4 .level-num{background:var(--gold-light);color:#7a5a00}
+.lvl-5 .level-num{background:#f5c842;color:#7a5a00}
+.lvl-6 .level-num{background:#e8a020;color:#fff}
+.lvl-7 .level-num{background:linear-gradient(135deg,#c9a84c,#e8c060);color:#fff}
+@media(min-width:600px){.chat-container,.roadmap-container{padding:2rem}.message{max-width:70%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">M</div>
+  <div class="header-text"><h1>Trợ Lý Midu AI</h1><p>Chuyên viên Chiều cao</p></div>
+  <span class="badge">✦ Hệ thống 8 bậc</span>
+</header>
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('chat')">💬 Hỏi đáp AI</div>
+  <div class="tab" onclick="switchTab('roadmap')">📊 Lộ trình thăng cấp</div>
+</div>
+<main>
+  <div class="panel active" id="panel-chat">
+    <div class="chat-container" id="chat-container">
+      <div class="welcome" id="welcome">
+        <div class="welcome-icon">📏</div>
+        <h2>Xin chào, Chuyên viên!</h2>
+        <p>Tôi là trợ lý AI hỗ trợ bạn về chuyên môn chiều cao, tư vấn khách hàng và lộ trình thăng cấp trong hệ thống Midu.</p>
+        <div class="quick-questions">
+          <button class="quick-btn" onclick="sendQuick('Điều kiện để lên Bậc 2 là gì?')">Lên Bậc 2 cần gì?</button>
+          <button class="quick-btn" onclick="sendQuick('Khách hàng 8 tuổi muốn tăng chiều cao, tôi tư vấn như thế nào?')">Tư vấn trẻ 8 tuổi</button>
+          <button class="quick-btn" onclick="sendQuick('PTTT là gì?')">PTTT là gì?</button>
+          <button class="quick-btn" onclick="sendQuick('Tôi đang ở Bậc 1, cần làm gì để lên Bậc 2?')">Roadmap Bậc 1 lên 2</button>
+          <button class="quick-btn" onclick="sendQuick('Magie có vai trò gì trong phát triển chiều cao?')">Vai trò của Magie</button>
+          <button class="quick-btn" onclick="sendQuick('Vận động gốc là gì?')">Vận động gốc</button>
+        </div>
+      </div>
+    </div>
+    <div class="input-area">
+      <div class="input-row">
+        <textarea id="user-input" placeholder="Hỏi về chuyên môn, tư vấn khách hàng, lộ trình thăng cấp..." rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+        <button class="send-btn" onclick="sendMessage()"><svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="panel" id="panel-roadmap">
+    <div class="roadmap-container">
+      <div class="roadmap-title">Hệ thống 8 Bậc Chuyên Viên &amp; Chuyên Gia Chiều Cao</div>
+      <div class="level-card lvl-0" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">0</div><div class="level-info"><div class="level-name">Chuyên viên Tập sự</div><div class="level-sub">Bước đầu tiên</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>Hoàn thành chương trình Chuyên viên chiều cao</li><li>Test khai mở và tốt nghiệp</li><li>2 bản phân tích PTTT và DDCC</li><li>2 bản phác đồ dự đoán chiều cao</li></ul></div><div class="stats-row"><span class="stat-pill">📄 2 phân tích</span><span class="stat-pill">📋 2 phác đồ</span></div><div class="level-section"><div class="level-section-title">Quyền lợi</div><ul><li>Chứng nhận tốt nghiệp</li><li>Tặng 10 voucher Phác đồ (1.800.000đ)</li></ul></div></div></div>
+      <div class="level-card lvl-1" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">1</div><div class="level-info"><div class="level-name">Chuyên viên Chính thức</div><div class="level-sub">Hoạt động chuyên nghiệp</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>Hoàn thành Chương trình ứng dụng Elearning</li><li>Hoàn thành khóa Vận động gốc</li><li>1 bài viết đóng góp cộng đồng</li></ul></div><div class="stats-row"><span class="stat-pill">📄 10 phân tích</span><span class="stat-pill">📋 10 phác đồ</span><span class="stat-pill">💰 5 triệu DS</span></div></div></div>
+      <div class="level-card lvl-2" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">2</div><div class="level-info"><div class="level-name">Chuyên viên Ưu tú</div><div class="level-sub">Mở rộng đội nhóm</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>Khóa Magie + Khóa liệu trình sản phẩm Midu</li><li>1 tháng chiến binh content</li><li>Test 20 câu trắc nghiệm</li><li>Tuyển 1 người hoàn thành tập sự</li><li>300 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 40 phân tích</span><span class="stat-pill">📋 20 phác đồ</span><span class="stat-pill">💰 20 triệu DS</span></div></div></div>
+      <div class="level-card lvl-3" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">3</div><div class="level-info"><div class="level-name">Chuyên viên Cao cấp</div><div class="level-sub">Đội nhóm vững mạnh</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>2 khóa chuyên sâu + kinh doanh bền vững</li><li>21 ngày rèn luyện Vận động gốc</li><li>Tuyển 3 người hoàn thành tập sự</li><li>500 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 80 phân tích</span><span class="stat-pill">📋 40 phác đồ</span><span class="stat-pill">💰 50 triệu DS</span></div></div></div>
+      <div class="level-card lvl-4" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">4</div><div class="level-info"><div class="level-name">Chuyên gia Chính thức</div><div class="level-sub">Hàng ngũ Chuyên gia</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>21 ngày Vận động gốc + 3 tháng content</li><li>Test 20 câu + 5 câu tự luận</li><li>Tuyển 5 người + hỗ trợ 2 CV chính thức</li><li>1.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 140 phân tích</span><span class="stat-pill">📋 70 phác đồ</span><span class="stat-pill">💰 100 triệu DS</span></div></div></div>
+      <div class="level-card lvl-5" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">5</div><div class="level-info"><div class="level-name">Chuyên gia Ưu tú</div><div class="level-sub">Tầm ảnh hưởng rộng</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>Test 20 câu + 10 câu tự luận</li><li>Tuyển 10 người + hỗ trợ 2 CV ưu tú</li><li>5.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 200 phân tích</span><span class="stat-pill">📋 100 phác đồ</span><span class="stat-pill">💰 200 triệu DS</span></div></div></div>
+      <div class="level-card lvl-6" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">6</div><div class="level-info"><div class="level-name">Chuyên gia Cao cấp</div><div class="level-sub">Lãnh đạo cộng đồng</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>Test 25 câu + 10 câu tự luận</li><li>Tuyển 15 người + hỗ trợ 3 CV cao cấp</li><li>20.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 300 phân tích</span><span class="stat-pill">📋 150 phác đồ</span><span class="stat-pill">💰 500 triệu DS</span></div></div></div>
+      <div class="level-card lvl-7" onclick="toggleLevel(this)"><div class="level-header"><div class="level-num">7</div><div class="level-info"><div class="level-name">Chuyên gia Cống hiến</div><div class="level-sub">Đỉnh cao hành trình</div></div><span class="level-arrow">▼</span></div><div class="level-body"><div class="level-section"><div class="level-section-title">Điều kiện</div><ul><li>Chương trình lãnh đạo 21 ngày</li><li>Test 30 câu + 15 câu tự luận</li><li>Tuyển 20 người + hỗ trợ 5 CV cao cấp</li><li>50.000 follower TikTok/YouTube</li></ul></div><div class="stats-row"><span class="stat-pill">📄 500 phân tích</span><span class="stat-pill">📋 250 phác đồ</span><span class="stat-pill">💰 1 tỷ DS</span></div></div></div>
+    </div>
+  </div>
+</main>
+<script>
+let messages = [], isLoading = false;
+function switchTab(t) {
+  document.querySelectorAll('.tab').forEach((x, i) => x.classList.toggle('active', ['chat','roadmap'][i] === t));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + t).classList.add('active');
+}
+function toggleLevel(c) { c.classList.toggle('open'); }
+function handleKey(e) { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); } }
+function autoResize(el) { el.style.height = 'auto'; el.style.height = Math.min(el.scrollHeight, 120) + 'px'; }
+function sendQuick(t) { document.getElementById('user-input').value = t; sendMessage(); }
+function addMessage(role, content) {
+  const c = document.getElementById('chat-container');
+  const w = document.getElementById('welcome'); if (w) w.remove();
+  const d = document.createElement('div'); d.className = 'message ' + role;
+  const a = document.createElement('div'); a.className = 'avatar'; a.textContent = role === 'user' ? 'B' : 'AI';
+  const b = document.createElement('div'); b.className = 'bubble';
+  b.innerHTML = content.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/**(.*?)**/g,'<strong>$1</strong>').replace(/
+/g,'<br>');
+  d.appendChild(a); d.appendChild(b); c.appendChild(d); c.scrollTop = c.scrollHeight;
+}
+function addTyping() {
+  const c = document.getElementById('chat-container');
+  const d = document.createElement('div'); d.className = 'message assistant'; d.id = 'typing-indicator';
+  const a = document.createElement('div'); a.className = 'avatar'; a.textContent = 'AI';
+  const b = document.createElement('div'); b.className = 'bubble';
+  b.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+  d.appendChild(a); d.appendChild(b); c.appendChild(d); c.scrollTop = c.scrollHeight;
+}
+function removeTyping() { const e = document.getElementById('typing-indicator'); if (e) e.remove(); }
+async function sendMessage() {
+  if (isLoading) return;
+  const input = document.getElementById('user-input');
+  const text = input.value.trim(); if (!text) return;
+  input.value = ''; input.style.height = 'auto';
+  addMessage('user', text); messages.push({ role: 'user', content: text });
+  isLoading = true; addTyping();
+  try {
+    const res = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ messages }) });
+    const data = await res.json(); removeTyping();
+    if (data.content && data.content[0]) {
+      const r = data.content[0].text; messages.push({ role: 'assistant', content: r }); addMessage('assistant', r);
+    } else { addMessage('assistant', 'Xin lỗi, có lỗi xảy ra. Vui lòng thử lại.'); }
+  } catch(err) { removeTyping(); addMessage('assistant', 'Không thể kết nối. Vui lòng thử lại.'); }
+  isLoading = false;
+}
+</script>
+</body>
+</html>
