@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tro Ly Midu AI</title>
+<title>Trợ lý Midu AI</title>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:"Be Vietnam Pro",sans-serif;background:#faf5ff;min-height:100vh;display:flex;flex-direction:column}
 .hdr{background:#fff;padding:12px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #f0e6f8}
 .logo{width:42px;height:42px;background:linear-gradient(135deg,#c2185b,#7b1fa2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;flex-shrink:0}
-.hdr h1{font-size:15px;font-weight:700;color:#7b1fa2;margin:0}
-.hdr p{font-size:11px;color:#ab47bc;margin:0}
+.hdr-info h1{font-size:15px;font-weight:700;color:#7b1fa2;margin:0}
+.hdr-info p{font-size:11px;color:#ab47bc;margin:0}
 .tabs{background:#fff;border-bottom:1px solid #f0e6f8;display:flex;padding:0 16px}
 .tab{padding:11px 16px;font-size:13px;font-weight:500;color:#999;cursor:pointer;border-bottom:2px solid transparent}
 .tab.on{color:#7b1fa2;border-bottom-color:#7b1fa2;font-weight:700}
@@ -31,7 +31,7 @@ main{flex:1;display:flex;flex-direction:column;overflow:hidden}
 .av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
 .msg.u .av{background:linear-gradient(135deg,#c2185b,#7b1fa2);color:#fff}
 .msg.b .av{background:#f5d800;color:#7b1fa2}
-.bbl{padding:10px 14px;border-radius:16px;font-size:13px;line-height:1.65}
+.bbl{padding:10px 14px;border-radius:16px;font-size:13px;line-height:1.7}
 .msg.u .bbl{background:linear-gradient(135deg,#c2185b,#7b1fa2);color:#fff;border-bottom-right-radius:3px}
 .msg.b .bbl{background:#fff;border:1px solid #f0e0f8;color:#333;border-bottom-left-radius:3px}
 .dots{display:flex;gap:4px;padding:3px 0}
@@ -56,49 +56,63 @@ main{flex:1;display:flex;flex-direction:column;overflow:hidden}
 .lvb{display:none;padding:0 14px 12px;border-top:1px solid #faf0ff}
 .lv.open .lvb{display:block}
 .lvb ul{list-style:none;padding:0;margin-top:8px}
-.lvb li{font-size:12px;color:#444;padding:3px 0 3px 16px;position:relative;line-height:1.5}
-.lvb li::before{content:">";position:absolute;left:0;color:#ab47bc;font-weight:700}
+.lvb li{font-size:12px;color:#444;padding:3px 0 3px 14px;position:relative;line-height:1.5}
+.lvb li::before{content:"·";position:absolute;left:0;color:#ab47bc;font-weight:700}
 .pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
 .pill{background:#f8f0ff;border:1px solid #e0c8f0;border-radius:6px;padding:4px 10px;font-size:11px;color:#7b1fa2;font-weight:500}
 </style>
 </head>
 <body>
-<div class="hdr"><div class="logo">M</div><div><h1>Tro ly Midu AI</h1><p>Chuyen gia chieu cao</p></div></div>
+<div class="hdr">
+  <div class="logo">M</div>
+  <div class="hdr-info">
+    <h1>Trợ lý Midu AI</h1>
+    <p>Chuyên gia chiều cao</p>
+  </div>
+</div>
 <div class="tabs">
-<div class="tab on" id="t1" onclick="sw(1)">Hoi dap AI</div>
-<div class="tab" id="t2" onclick="sw(2)">Lo trinh thang cap</div>
+  <div class="tab on" id="t1" onclick="sw(1)">Hỏi đáp AI</div>
+  <div class="tab" id="t2" onclick="sw(2)">Lộ trình thăng cấp</div>
 </div>
 <main>
 <div class="panel on" id="p1">
-<div class="chat" id="ca">
-<div class="welcome" id="wl">
-<div class="wi">&#128207;</div>
-<h2>Xin chao, Chuyen vien!</h2>
-<p>Hoi toi ve chuyen mon chieu cao, tu van khach hang hoac lo trinh thang cap.</p>
-<div class="chips">
-<span class="chip" onclick="sq('Dieu kien len Bac 2 la gi?')">Len Bac 2 can gi?</span>
-<span class="chip" onclick="sq('Khach hang 8 tuoi muon tang chieu cao, toi tu van nhu the nao?')">Tu van tre 8 tuoi</span>
-<span class="chip" onclick="sq('PTTT la gi?')">PTTT la gi?</span>
-<span class="chip" onclick="sq('Van dong goc la gi?')">Van dong goc</span>
-<span class="chip" onclick="sq('Magie co vai tro gi voi chieu cao?')">Vai tro Magie</span>
-<span class="chip" onclick="sq('Toi dang o Bac 1, can lam gi de len Bac 2?')">Roadmap Bac 1 len 2</span>
-</div></div></div>
-<div class="ibar"><div class="irow">
-<textarea id="inp" placeholder="Hoi ve chuyen mon, tu van, lo trinh..." rows="1"></textarea>
-<button class="sbtn" id="sb"><svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
-</div></div>
+  <div class="chat" id="ca">
+    <div class="welcome" id="wl">
+      <div class="wi">📏</div>
+      <h2>Xin chào, Chuyên viên!</h2>
+      <p>Hỏi về quy trình đào tạo, kiến thức chiều cao, sản phẩm Midu hoặc lộ trình thăng cấp.</p>
+      <div class="chips">
+        <span class="chip" onclick="sq('Quy trình đào tạo chuyên viên gồm những bước nào?')">Quy trình đào tạo</span>
+        <span class="chip" onclick="sq('Điều kiện để lên Bậc 1 là gì?')">Điều kiện lên Bậc 1</span>
+        <span class="chip" onclick="sq('Hai con đường tăng chiều cao là gì?')">Hai con đường chiều cao</span>
+        <span class="chip" onclick="sq('Phác đồ dự đoán chiều cao là gì và dùng như thế nào?')">Phác đồ chiều cao</span>
+        <span class="chip" onclick="sq('Làm sao tiếp cận khách hàng đúng cách chuyên gia?')">Cách tiếp cận khách hàng</span>
+        <span class="chip" onclick="sq('Sản phẩm Midu 180mcg và 360mcg khác nhau thế nào?')">So sánh sản phẩm Midu</span>
+      </div>
+    </div>
+  </div>
+  <div class="ibar">
+    <div class="irow">
+      <textarea id="inp" placeholder="Nhập câu hỏi của bạn..." rows="1"></textarea>
+      <button class="sbtn" id="sb">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      </button>
+    </div>
+  </div>
 </div>
 <div class="panel" id="p2">
-<div class="rmap"><h3>He thong 8 Bac Chuyen Vien & Chuyen Gia</h3>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#f0f0f0;color:#666">0</div><div><div class="lvname">Chuyen vien Tap su</div><div class="lvdesc">Buoc khoi dau</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>Hoan thanh chuong trinh Chuyen vien chieu cao</li><li>Test khai mo va tot nghiep</li><li>2 phan tich PTTT va DDCC</li><li>2 phac do du doan chieu cao</li></ul><div class="pills"><span class="pill">2 phan tich</span><span class="pill">2 phac do</span><span class="pill">10 voucher</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#fce4ec;color:#c2185b">1</div><div><div class="lvname">Chuyen vien Chinh thuc</div><div class="lvdesc">Bat dau hanh nghe</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>Hoan thanh Chuong trinh ung dung Elearning</li><li>Hoan thanh khoa Van dong goc</li><li>1 bai viet dong gop cong dong</li></ul><div class="pills"><span class="pill">10 phan tich</span><span class="pill">10 phac do</span><span class="pill">5 trieu DS</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#f3e5f5;color:#7b1fa2">2</div><div><div class="lvname">Chuyen vien Uu tu</div><div class="lvdesc">Mo rong doi nhom</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>Khoa Magie + Khoa lieu trinh san pham Midu</li><li>1 thang chien binh content</li><li>Tuyen 1 nguoi hoan thanh tap su</li><li>300 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">40 phan tich</span><span class="pill">20 phac do</span><span class="pill">20 trieu DS</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#ede7f6;color:#4527a0">3</div><div><div class="lvname">Chuyen vien Cao cap</div><div class="lvdesc">Doi nhom vung manh</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>2 khoa chuyen sau + kinh doanh ben vung</li><li>21 ngay ren luyen Van dong goc</li><li>Tuyen 3 nguoi + 500 follower</li></ul><div class="pills"><span class="pill">80 phan tich</span><span class="pill">40 phac do</span><span class="pill">50 trieu DS</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#fff9c4;color:#f57f17">4</div><div><div class="lvname">Chuyen gia Chinh thuc</div><div class="lvdesc">Vao hang ngu Chuyen gia</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>21 ngay Van dong goc + 3 thang content</li><li>Test 20 cau + 5 cau tu luan</li><li>Tuyen 5 nguoi + ho tro 2 CV chinh thuc</li><li>1.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">140 phan tich</span><span class="pill">70 phac do</span><span class="pill">100 trieu DS</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#fff176;color:#e65100">5</div><div><div class="lvname">Chuyen gia Uu tu</div><div class="lvdesc">Tam anh huong lon</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>Test 20 cau + 10 cau tu luan</li><li>Tuyen 10 nguoi + ho tro 2 CV uu tu</li><li>5.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">200 phan tich</span><span class="pill">100 phac do</span><span class="pill">200 trieu DS</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#ffd600;color:#7b1fa2">6</div><div><div class="lvname">Chuyen gia Cao cap</div><div class="lvdesc">Lanh dao cong dong</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>Test 25 cau + 10 cau tu luan</li><li>Tuyen 15 nguoi + ho tro 3 CV cao cap</li><li>20.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">300 phan tich</span><span class="pill">150 phac do</span><span class="pill">500 trieu DS</span></div></div></div>
-<div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#c9a84c;color:#fff">7</div><div><div class="lvname">Chuyen gia Cong hien</div><div class="lvdesc">Dinh cao hanh trinh</div></div><span class="lvarr">v</span></div><div class="lvb"><ul><li>Chuong trinh lanh dao 21 ngay</li><li>Test 30 cau + 15 cau tu luan</li><li>Tuyen 20 nguoi + ho tro 5 CV cao cap</li><li>50.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">500 phan tich</span><span class="pill">250 phac do</span><span class="pill">1 ty DS</span></div></div></div>
-</div></div>
+  <div class="rmap">
+    <h3>Hệ thống 8 Bậc Chuyên Viên và Chuyên Gia</h3>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#f0f0f0;color:#666">0</div><div><div class="lvname">Chuyên viên Tập sự</div><div class="lvdesc">Sau khi tốt nghiệp</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>Hoàn thành chương trình và thi tốt nghiệp</li><li>Nộp 2 phác đồ thực tế</li></ul><div class="pills"><span class="pill">Nhận 10 voucher phác đồ (1.800.000đ)</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#fce4ec;color:#c2185b">1</div><div><div class="lvname">Chuyên viên Chính thức</div><div class="lvdesc">Bắt đầu hành nghề</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>Elearning ứng dụng + Khóa vận động gốc</li><li>10 phác đồ thực tế</li><li>1 bài viết đóng góp cộng đồng</li></ul><div class="pills"><span class="pill">5 triệu doanh số</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#f3e5f5;color:#7b1fa2">2</div><div><div class="lvname">Chuyên viên Ưu tú</div><div class="lvdesc">Mở rộng đội nhóm</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>Khóa Magie + Khóa liệu trình sản phẩm</li><li>1 tháng chiến binh content</li><li>Tuyển 1 người qua Tập sự</li><li>300 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">40 phác đồ</span><span class="pill">20 triệu DS</span><span class="pill">DS đội 10tr/tháng</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#ede7f6;color:#4527a0">3</div><div><div class="lvname">Chuyên viên Cao cấp</div><div class="lvdesc">Đội nhóm vững mạnh</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>2 khóa chuyên sâu + Kinh doanh bền vững</li><li>21 ngày vận động gốc</li><li>Tuyển 3 người qua Tập sự</li><li>500 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">80 phác đồ</span><span class="pill">50 triệu DS</span><span class="pill">DS đội 30tr/tháng</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#fff9c4;color:#f57f17">4</div><div><div class="lvname">Chuyên gia Chính thức</div><div class="lvdesc">Vào hàng ngũ chuyên gia</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>21 ngày vận động gốc + 3 tháng content</li><li>Test 20 câu + 5 câu tự luận</li><li>Tuyển 5 người + hỗ trợ 2 chuyên viên Chính thức</li><li>1.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">140 phác đồ</span><span class="pill">100 triệu DS</span><span class="pill">DS đội 40tr/tháng</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#fff176;color:#e65100">5</div><div><div class="lvname">Chuyên gia Ưu tú</div><div class="lvdesc">Tầm ảnh hưởng lớn</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>Test 20 câu + 10 câu tự luận</li><li>Tuyển 10 người + hỗ trợ 2 chuyên viên Ưu tú</li><li>5.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">200 phác đồ</span><span class="pill">200 triệu DS</span><span class="pill">DS đội 50tr/tháng</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#ffd600;color:#7b1fa2">6</div><div><div class="lvname">Chuyên gia Cao cấp</div><div class="lvdesc">Lãnh đạo cộng đồng</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>Test 25 câu + 10 câu tự luận</li><li>Tuyển 15 người + hỗ trợ 3 chuyên viên Cao cấp</li><li>20.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">300 phác đồ</span><span class="pill">500 triệu DS</span><span class="pill">DS đội 60tr/tháng</span></div></div></div>
+    <div class="lv" onclick="this.classList.toggle('open')"><div class="lvh"><div class="lvn" style="background:#c9a84c;color:#fff">7</div><div><div class="lvname">Chuyên gia Cống hiến</div><div class="lvdesc">Đỉnh cao hành trình</div></div><span class="lvarr">▼</span></div><div class="lvb"><ul><li>Chương trình lãnh đạo 21 ngày</li><li>Test 30 câu + 15 câu tự luận</li><li>Tuyển 20 người + hỗ trợ 5 chuyên viên Cao cấp</li><li>50.000 follower TikTok/YouTube</li></ul><div class="pills"><span class="pill">500 phác đồ</span><span class="pill">1 tỷ DS</span><span class="pill">DS đội 80tr/tháng</span></div></div></div>
+  </div>
+</div>
 </main>
 <script>
 var msgs=[],busy=false;
@@ -108,36 +122,36 @@ document.getElementById("sb").onclick=function(){go();};
 inp.onkeydown=function(e){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();go();}};
 inp.oninput=function(){this.style.height="auto";this.style.height=Math.min(this.scrollHeight,100)+"px";};
 function sw(n){
-document.querySelectorAll(".panel").forEach(function(x){x.classList.remove("on");});
-document.getElementById("p"+n).classList.add("on");
-document.querySelectorAll(".tab").forEach(function(x){x.classList.remove("on");});
-document.getElementById("t"+n).classList.add("on");
+  document.querySelectorAll(".panel").forEach(function(x){x.classList.remove("on");});
+  document.getElementById("p"+n).classList.add("on");
+  document.querySelectorAll(".tab").forEach(function(x){x.classList.remove("on");});
+  document.getElementById("t"+n).classList.add("on");
 }
 function sq(t){inp.value=t;go();}
 function addm(r,h){
-var w=document.getElementById("wl");if(w)w.remove();
-var d=document.createElement("div");d.className="msg "+r;
-var a=document.createElement("div");a.className="av";a.textContent=r==="u"?"B":"AI";
-var b=document.createElement("div");b.className="bbl";b.innerHTML=h;
-d.appendChild(a);d.appendChild(b);ca.appendChild(d);ca.scrollTop=ca.scrollHeight;
-return b;
+  var w=document.getElementById("wl");if(w)w.remove();
+  var d=document.createElement("div");d.className="msg "+r;
+  var a=document.createElement("div");a.className="av";a.textContent=r==="u"?"B":"AI";
+  var b=document.createElement("div");b.className="bbl";b.innerHTML=h;
+  d.appendChild(a);d.appendChild(b);ca.appendChild(d);ca.scrollTop=ca.scrollHeight;
+  return b;
 }
 function e(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
-function f(s){return e(s).replace(/\*\*([^*]+)\*\*/g,"<strong>$1</strong>").replace(/\n/g,"<br>");}
+function f(s){return e(s).replace(/\n/g,"<br>");}
 function go(){
-if(busy)return;
-var t=inp.value.trim();if(!t)return;
-inp.value="";inp.style.height="auto";
-addm("u",e(t));msgs.push({role:"user",content:t});
-busy=true;
-var b=addm("b","<div class=\"dots\"><span></span><span></span><span></span></div>");
-fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:msgs})})
-.then(function(r){return r.json();})
-.then(function(d){
-var rep=(d.content&&d.content[0])?d.content[0].text:"Xin loi, co loi xay ra.";
-msgs.push({role:"assistant",content:rep});b.innerHTML=f(rep);
-ca.scrollTop=ca.scrollHeight;busy=false;
-}).catch(function(){b.innerHTML="Khong the ket noi.";busy=false;});
+  if(busy)return;
+  var t=inp.value.trim();if(!t)return;
+  inp.value="";inp.style.height="auto";
+  addm("u",e(t));msgs.push({role:"user",content:t});
+  busy=true;
+  var b=addm("b","<div class=\"dots\"><span></span><span></span><span></span></div>");
+  fetch("/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:msgs})})
+  .then(function(r){return r.json();})
+  .then(function(d){
+    var rep=(d.content&&d.content[0])?d.content[0].text:"Xin lỗi, có lỗi xảy ra.";
+    msgs.push({role:"assistant",content:rep});b.innerHTML=f(rep);
+    ca.scrollTop=ca.scrollHeight;busy=false;
+  }).catch(function(){b.innerHTML="Không thể kết nối. Vui lòng thử lại.";busy=false;});
 }
 </script>
 </body>
